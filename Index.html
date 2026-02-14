@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>تاريخ العذيبة</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+    margin: 0;
+    font-family: "Tahoma", Arial, sans-serif;
+    background: #f4efe6;
+    color: #333;
+}
+header {
+    background: #6b4f2a;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+nav {
+    display: flex;
+    background: #4d381f;
+}
+nav button {
+    flex: 1;
+    padding: 14px;
+    border: none;
+    background: none;
+    color: white;
+    font-size: 15px;
+}
+nav button:hover {
+    background: #6b4f2a;
+}
+section {
+    display: none;
+    padding: 20px;
+}
+section.active {
+    display: block;
+}
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+footer {
+    text-align: center;
+    padding: 10px;
+    font-size: 12px;
+    color: #777;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>العذيبة (Al 3thebah)</h1>
+    <p>تاريخ منطقة في الريان الجديدة</p>
+</header>
+
+<nav>
+    <button onclick="showSection('home')">الرئيسية</button>
+    <button onclick="showSection('history')">التاريخ</button>
+    <button onclick="showSection('life')">الحياة</button>
+    <button onclick="showSection('map')">الموقع</button>
+    <button onclick="showSection('future')">المستقبل</button>
+</nav>
+
+<section id="home" class="active">
+    <div class="card">
+        <h2>مرحباً بكم</h2>
+        <p>
+            العذيبة هي منطقة صغيرة في الريان الجديدة بدولة قطر.
+            رغم أن المباني حديثة، إلا أن الأرض تحمل تاريخاً أقدم بكثير.
+        </p>
+    </div>
+</section>
+
+<section id="history">
+    <div class="card">
+        <h2>قبل العمران</h2>
+        <p>
+            كانت العذيبة منخفضاً طبيعياً تتجمع فيه مياه الأمطار.
+            واسمها مأخوذ من كلمة "عذب" أي الماء الصالح للشرب.
+        </p>
+    </div>
+    <div class="card">
+        <h2>محطة للبدو</h2>
+        <p>
+            مرّت عبر هذه الأرض قوافل الإبل والعائلات البدوية
+            في طريقهم بين الريان، دخان، وأم باب.
+        </p>
+    </div>
+    <div class="card">
+        <h2>النمو الحديث</h2>
+        <p>
+            في أواخر الثمانينات والتسعينات أصبحت العذيبة منطقة سكنية
+            مع توسع مدينة الريان.
+        </p>
+    </div>
+</section>
+
+<section id="life">
+    <div class="card">
+        <h2>الحياة اليومية</h2>
+        <p>
+            يسكن العذيبة اليوم حوالي 500 شخص تقريباً.
+            وهي منطقة هادئة يعرف فيها الجيران بعضهم البعض.
+        </p>
+    </div>
+    <div class="card">
+        <h2>الأمطار والزراعة</h2>
+        <p>
+            ما زالت الشوارع تغمرها المياه عند هطول الأمطار،
+            ويزرع الأطفال في الرمل الرطب كما كان يحدث قديماً.
+        </p>
+    </div>
+</section>
+
+<section id="map">
+    <div class="card">
+        <h2>الموقع</h2>
+        <p>خريطة منطقة العذيبة (الريان الجديدة):</p>
+
+        <iframe
+            src="https://www.google.com/maps?q=Al+Adhibah+Al+Rayyan+Qatar&output=embed"
+            width="100%"
+            height="300"
+            style="border:0; border-radius:10px;"
+            allowfullscreen=""
+            loading="lazy">
+        </iframe>
+
+        <p style="font-size:13px; color:#666;">
+            يمكنك التكبير والتصغير داخل الخريطة.
+        </p>
+    </div>
+</section>
+
+<section id="future">
+    <div class="card">
+        <h2>المستقبل</h2>
+        <p>
+            قصة العذيبة ما زالت تُكتب.
+            هذا التطبيق يحفظ ذاكرة الأرض وأهلها للأجيال القادمة.
+        </p>
+    </div>
+</section>
+
+<footer>
+    صنع بأيدي أهل العذيبة 🌿
+</footer>
+
+<script>
+function showSection(id) {
+    document.querySelectorAll("section").forEach(s => s.classList.remove("active"));
+    document.getElementById(id).classList.add("active");
+}
+</script>
+
+</body>
+</html>
